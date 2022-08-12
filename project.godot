@@ -8,9 +8,32 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Main",
+"language": "GDScript",
+"path": "res://scripts/main.gd"
+}, {
+"base": "Spatial",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/player.gd"
+}, {
+"base": "Spatial",
+"class": "PlayerCamera",
+"language": "GDScript",
+"path": "res://scripts/camera/player_camera.gd"
+} ]
+_global_script_class_icons={
+"Main": "",
+"Player": "",
+"PlayerCamera": ""
+}
+
 [application]
 
 config/name="Slippery"
+run/main_scene="res://scenes/main.tscn"
 config/icon="res://assets/icon.png"
 
 [gui]
