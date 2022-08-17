@@ -8,23 +8,19 @@ export var angle_v_adjust := 0.0
 export var autoturn_ray_aperture := 25
 export var autoturn_speed := 50
 
-var _target: Spatial = null
 var _max_height := 2.0
 var _min_height := 1.0
+
+onready var _target: Spatial = get_parent()
 
 
 func _ready() -> void:
 	# This detaches the camera transform from the parent spatial node
-	# set_as_toplevel(true)
-	pass
+	set_as_toplevel(true)
 
 
 func _physics_process(delta: float) -> void:
-	if has_target():
-		process_camera(delta)
-	else:
-		_target = null
-		set_physics_process(false)
+	process_camera(delta)
 
 
 func process_camera(delta: float) -> void:
@@ -83,14 +79,3 @@ func process_camera(delta: float) -> void:
 	var t = get_transform()
 	t.basis = Basis(t.basis[0], deg2rad(angle_v_adjust)) * t.basis
 	set_transform(t)
-
-
-func set_target(target: Spatial) -> void:
-	_target = target
-	if _target != null:
-		translation = _target.translation + Vector3(0.1, 1, 0.1)
-	set_physics_process(_target != null)
-
-
-func has_target() -> bool:
-	return _target != null and is_instance_valid(_target)

@@ -9,6 +9,16 @@ A [*Monkey Target*](https://supermonkeyball.fandom.com/wiki/Monkey_Target) like 
 
 </div>
 
-## Tools
+## References
 
-- [Texture Grid Generator](https://wahooney.itch.io/texture-grid-generator)
+### Tools
+
+- [Texture Grid Generator](https://wahooney.itch.io/texture-grid-generator) by [wahooney](https://wahooney.itch.io)
+
+### Projects
+
+- [Super Poli Ball](https://github.com/Brawmario/super-poli-ball) by [Brawmario](https://github.com/Brawmario)
+
+### Tutorials
+
+- [Finite State Machine](https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/) by [GDQuest](https://github.com/GDQuest)

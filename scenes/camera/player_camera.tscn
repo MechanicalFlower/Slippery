@@ -6,3 +6,4 @@
 script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
+far = 200.0

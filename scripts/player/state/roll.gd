@@ -1,19 +1,11 @@
-class_name Player
+class_name Roll
 
-extends Spatial
+extends PlayerState
 
 export var rot_speed := 5.0
 
-onready var _marble := get_node("%Marble") as RigidBody
-onready var _camera := get_node("%PlayerCamera") as Spatial
 
-
-func _ready() -> void:
-	_camera.set_target(_marble)
-	set_physics_process(true)
-
-
-func _physics_process(_delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	var dir := Vector3.ZERO
 	var cam_xform := _camera.get_global_transform()
 
@@ -24,4 +16,7 @@ func _physics_process(_delta: float) -> void:
 
 	var target_dir := dir - Vector3.UP * dir.dot(Vector3.UP)
 	var target_axis := target_dir.rotated(Vector3.UP, PI / 2.0)
-	_marble.add_torque(target_axis * rot_speed)
+	_player.add_torque(target_axis * rot_speed)
+
+	if Input.is_action_just_pressed("jump"):
+		state_machine.transition_to("Glide", {do_jump = true})
