@@ -3,7 +3,7 @@ class_name PlayerState
 extends State
 
 var _velocity := Vector3.ZERO
-var _rotation := Basis.IDENTITY
+var _basis := Basis.IDENTITY
 var _player: Player = null
 
 onready var _camera := get_node("%PlayerCamera") as PlayerCamera

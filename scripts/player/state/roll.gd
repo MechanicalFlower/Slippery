@@ -5,6 +5,11 @@ extends PlayerState
 export var rot_speed := 5.0
 
 
+func update(_delta: float) -> void:
+	if _player.get_global_transform().origin.y < -10:
+		state_machine.transition_to("Stun")
+
+
 func physics_update(_delta: float) -> void:
 	var dir := Vector3.ZERO
 	var cam_xform := _camera.get_global_transform()

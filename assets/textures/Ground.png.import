@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Marble_1m x 1m.png-2d66d94465dd3d470b996ee0218a7fe2.s3tc.stex"
-path.etc2="res://.import/Marble_1m x 1m.png-2d66d94465dd3d470b996ee0218a7fe2.etc2.stex"
+path.s3tc="res://.import/Ground.png-8eb2e6ee3a97556c523fe279e9731c59.s3tc.stex"
+path.etc2="res://.import/Ground.png-8eb2e6ee3a97556c523fe279e9731c59.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Marble_1m x 1m.png"
-dest_files=[ "res://.import/Marble_1m x 1m.png-2d66d94465dd3d470b996ee0218a7fe2.s3tc.stex", "res://.import/Marble_1m x 1m.png-2d66d94465dd3d470b996ee0218a7fe2.etc2.stex" ]
+source_file="res://assets/textures/Ground.png"
+dest_files=[ "res://.import/Ground.png-8eb2e6ee3a97556c523fe279e9731c59.s3tc.stex", "res://.import/Ground.png-8eb2e6ee3a97556c523fe279e9731c59.etc2.stex" ]
 
 [params]
 

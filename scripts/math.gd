@@ -23,3 +23,27 @@ static func from_to_rotation(from_direction: Vector3, to_direction: Vector3) -> 
 		axis = Vector3.RIGHT
 
 	return Quat(axis, angle).normalized()
+
+
+# https://github.com/h3r2tic/dolly
+class ExpSmoothed:
+	# An ad-hoc multiplier to make default smoothness parameters
+	# produce good-looking results
+	const SMOOTHNESS_MULT := 8.0
+
+	var _prev = null
+
+	func exp_smooth_towards(
+		target: Vector3, smoothness: float, predictive: float, delta: float
+	) -> Vector3:
+		# Calculate the exponential blending based on frame time
+		var interp_t := 1.0 - exp(-SMOOTHNESS_MULT * delta / max(smoothness, 1e-5))
+
+		var prev = _prev if _prev != null else target
+		var smooth = lerp(prev, target, interp_t)
+
+		_prev = smooth
+
+		if predictive:
+			return lerp(target, smooth, -1.0)
+		return smooth

@@ -6,10 +6,16 @@ onready var _fsm := get_node("%StateMachine") as StateMachine
 onready var _label := get_node("%DebugStateLabel") as Label
 
 
+func _ready() -> void:
+	set_contact_monitor(true)
+	set_max_contacts_reported(1)
+
+
 func _process(_delta: float) -> void:
 	DebugDraw.set_text("FPS", Engine.get_frames_per_second())
 	DebugDraw.set_text("State", _fsm._state.name)
 	DebugDraw.set_text("Position", global_transform.origin)
+	DebugDraw.set_text("Velocity", get_linear_velocity())
 
 	debug_linear_velocity()
 
