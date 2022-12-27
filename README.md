@@ -9,6 +9,12 @@ A [*Monkey Target*](https://supermonkeyball.fandom.com/wiki/Monkey_Target) like 
 
 </div>
 
+## Contributing
+
+We welcome community contributions to this project.
+
+Please read our [Contributor Guide](CONTRIBUTING.md) for more information on how to get started.
+
 ## References
 
 ### Tools
